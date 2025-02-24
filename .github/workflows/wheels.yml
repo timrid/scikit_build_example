@@ -44,7 +44,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-      name: [ "macOS (x86_64)", "macOS (arm64)", "iOS"]
+        name: [ "macOS (x86_64)", "macOS (arm64)", "iOS"]
         include:
           - name: macOS (x86_64)
             platform: macos
