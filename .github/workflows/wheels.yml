@@ -90,6 +90,7 @@ jobs:
         CIBW_PLATFORM: ${{ matrix.platform }}
         CIBW_ARCHS: ${{ matrix.archs }}
         CIBW_BUILD: "cp*"
+        CIBW_BUILD_FRONTEND: build
 
 #    - uses: pypa/cibuildwheel@v2.22
 #      env:
