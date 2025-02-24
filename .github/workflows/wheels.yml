@@ -80,7 +80,7 @@ jobs:
         mkdir -p /Users/runner/Library/Developer/XCTestDevices
 
     - name: Build wheels
-      run: uv run cibuildwheel
+      run: uv run cibuildwheel --with git+https://github.com/freakboy3742/cibuildwheel.git@ios-support
       env:
         CIBW_PLATFORM: ${{ matrix.platform }}
         CIBW_ARCHS: ${{ matrix.archs }}
