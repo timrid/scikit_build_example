@@ -71,7 +71,7 @@ jobs:
         python -m pip install -U pip
         # Use a branch while iOS support is in development and test-sources is unpublished.
         # python -m pip install cibuildwheel==3.0.0
-        python -m pip install git+https://github.com/freakboy3742/cibuildwheel.git@ios-support
+        uv python -m pip install git+https://github.com/freakboy3742/cibuildwheel.git@ios-support
 
     - name: iOS testing set workaround
       if: matrix.platform == 'ios'
