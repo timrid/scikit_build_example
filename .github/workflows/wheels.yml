@@ -43,21 +43,21 @@ jobs:
     runs-on: ${{ matrix.runs-on }}
     strategy:
       fail-fast: false
-       matrix:
-      name: [ "macOS (x86_64)", "macOS (arm64)", "iOS"]
-        include:
-          - name: macOS (x86_64)
-            platform: macos
-            runs-on: macos-13
-            archs: auto
-          - name: macOS (arm64)
-            platform: macos
-            runs-on: macos-latest
-            archs: auto,universal2
-          - name: iOS
-            platform: ios
-            runs-on: macos-latest
-            archs: auto
+      matrix:
+        name: [ "macOS (x86_64)", "macOS (arm64)", "iOS"]
+          include:
+            - name: macOS (x86_64)
+              platform: macos
+              runs-on: macos-13
+              archs: auto
+            - name: macOS (arm64)
+              platform: macos
+              runs-on: macos-latest
+              archs: auto,universal2
+            - name: iOS
+              platform: ios
+              runs-on: macos-latest
+              archs: auto
 
     steps:
     - uses: actions/checkout@v4
